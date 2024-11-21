@@ -1,48 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 10:32:00 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/13 12:20:00 by thdinh           ###   ########.fr       */
+/*   Created: 2024/11/11 10:17:46 by thdinh            #+#    #+#             */
+/*   Updated: 2024/11/11 10:18:07 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	size_t	src_length;
+	int	result;
+	int	sign;
 
-	i = 0;
-	src_length = 0;
-	while (src[src_length] != '\0')
-		src_length++;
-	if (size > 0)
+	result = 0;
+	sign = 1;
+	while ((*nptr >= 9 && *nptr <= 13) || *nptr == 32)
 	{
-		while (src[i] != '\0' && i < size - 1)
-		{
-			dst[i] = src [i];
-			i++;
-		}
-		dst[i] = '\0';
+		nptr++;
 	}
-	return (src_length);
+	if (*nptr == '+' || *nptr == '-')
+	{
+		if (*nptr == '-')
+		{
+			sign = -sign;
+		}
+		nptr++;
+	}
+	while (*nptr >= '0' && *nptr <= '9')
+	{
+		result = result * 10 + (*nptr - '0');
+		nptr++;
+	}
+	return (result * sign);
 }
 
 /*#include <stdio.h>
+#include <stdlib.h>
+
 int	main(void)
 {
-	char src[] = "lovely";
-	char dest1[7];
-	char dest2[5];
-
-	ft_strlcpy(dest1, src, sizeof(dest1));
-	printf("%s\n", dest1);
-	ft_strlcpy(dest2, src, sizeof(dest2));
-	printf("%s\n", dest2);
+	char	str[] = "   +1234ab456";
+	int	num = ft_atoi(str);
+	int	num2 = atoi(str);
+	printf("%d\n", num2);
+	printf("%d\n", num);
 	return (0);
 }*/

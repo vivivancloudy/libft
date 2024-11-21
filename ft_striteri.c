@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 10:23:02 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/13 12:22:43 by thdinh           ###   ########.fr       */
+/*   Created: 2024/11/15 10:44:35 by thdinh            #+#    #+#             */
+/*   Updated: 2024/11/15 10:56:34 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	int	i;
+	unsigned int	i;
 
 	i = 0;
-	while (*s)
+	if (!s || !f)
+		return;
+	while (s[i])
 	{
-		s++;
+		f(i, &s[i]);
 		i++;
 	}
-	return (i);
 }
 
-/*#include <stdio.h>
+void	inc_index(unsigned int i, char *c)
+{
+	*c += i;
+}
+
 int	main(void)
 {
-	char	str[] = "Hi";
-	int	num = ft_strlen(str);
-	printf("%d\n", num);
-}*/
+	char str[] = "bcdef";
+	ft_striteri(str, inc_index);
+	printf("%s\n", str);
+	return (0);
+}

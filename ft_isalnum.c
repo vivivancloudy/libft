@@ -1,34 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 10:23:02 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/13 12:22:43 by thdinh           ###   ########.fr       */
+/*   Created: 2024/11/11 11:16:21 by thdinh            #+#    #+#             */
+/*   Updated: 2024/11/11 11:18:43 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_isalnum(int c)
 {
-	int	i;
-
-	i = 0;
-	while (*s)
-	{
-		s++;
-		i++;
-	}
-	return (i);
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }
 
 /*#include <stdio.h>
-int	main(void)
+int main(void)
 {
-	char	str[] = "Hi";
-	int	num = ft_strlen(str);
-	printf("%d\n", num);
+    printf("ft_isalnum('A') = %d\n", ft_isalnum('A'));  
+    printf("ft_isalnum('5') = %d\n", ft_isalnum('5'));  
+    printf("ft_isalnum('$') = %d\n", ft_isalnum('$'));  
+    printf("ft_isalnum('g') = %d\n", ft_isalnum('g')); 
+    printf("ft_isalnum(' ') = %d\n", ft_isalnum(' '));  
 }*/

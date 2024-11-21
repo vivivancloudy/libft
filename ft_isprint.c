@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 10:23:02 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/13 12:22:43 by thdinh           ###   ########.fr       */
+/*   Created: 2024/11/11 11:29:37 by thdinh            #+#    #+#             */
+/*   Updated: 2024/11/11 11:30:21 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_isprint(int c)
 {
-	int	i;
-
-	i = 0;
-	while (*s)
-	{
-		s++;
-		i++;
-	}
-	return (i);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
 
 /*#include <stdio.h>
-int	main(void)
+int main(void)
 {
-	char	str[] = "Hi";
-	int	num = ft_strlen(str);
-	printf("%d\n", num);
+    printf("ft_isprint(65) = %d\n", ft_isprint(65)); 
+    printf("ft_isprint(200) = %d\n", ft_isprint(200));
+    printf("ft_isprint(127) = %d\n", ft_isprint(127));
+    printf("ft_isprint(32) = %d\n", ft_isprint(32));
 }*/
