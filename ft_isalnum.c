@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 11:16:21 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/11 11:18:43 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/25 15:44:54 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_isalnum(int c)
 	return (0);
 }
 
-/*#include <stdio.h>
-int main(void)
+/*int main(void)
 {
     printf("ft_isalnum('A') = %d\n", ft_isalnum('A'));  
     printf("ft_isalnum('5') = %d\n", ft_isalnum('5'));  

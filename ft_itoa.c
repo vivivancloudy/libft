@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:14:38 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/15 12:34:33 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/25 15:31:51 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ char	*ft_itoa(int n)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int	n = 12445687;
 	printf("%s\n", ft_itoa(n));
 	return (0);
-}
+}*/
