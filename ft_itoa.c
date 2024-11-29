@@ -15,7 +15,7 @@
 static int	get_num_length(int n)
 {
 	long	num;
-	int	len;
+	int		len;
 	long	temp;
 
 	num = n;
@@ -25,7 +25,7 @@ static int	get_num_length(int n)
 		len = 0;
 	temp = num;
 	if (num < 0)
-		num = - num;	
+		num = -num;
 	while (temp)
 	{
 		len++;
@@ -38,8 +38,8 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	long	num;
-	int	len;
-	
+	int		len;
+
 	num = n;
 	len = get_num_length(n);
 	str = malloc(len + 1);

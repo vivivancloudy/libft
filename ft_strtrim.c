@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 10:54:28 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/18 12:18:02 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/26 17:02:29 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*str;
 
 	start = 0;
-	end = ft_strlen(s1);
 	if (!s1 || !set)
 		return (NULL);
+	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[start]) && s1[start])
 		start++;
 	while (ft_strchr(set, s1[end - 1]) && end > start)

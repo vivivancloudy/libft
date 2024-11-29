@@ -14,7 +14,7 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	char *arr;
+	char	*arr;
 	size_t	i;
 
 	arr = malloc(nmemb * size);
@@ -50,4 +50,3 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (0);
 }*/	
 //ft_memset(arr, 0, nmemb * size);
-

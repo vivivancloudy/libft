@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 16:28:44 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/14 15:49:26 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/28 12:32:31 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,14 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	size_t	s_len;
 	char	*substr;
 
 	if (!s)
 		return (NULL);
-	s_len = ft_strlen(s);
-	if (s_len <= start)
-	{
-		return (NULL);
-	}
-	if (len > s_len - start)
-		len = s_len - start;
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
 	substr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!substr)
 		return (NULL);
@@ -40,13 +36,19 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (substr);
 }
 
-/*int	main(void)
-{
-	char *str = "Hello world";
-	char *sub = ft_substr(str, 11, 5);
-	if (sub)
-		printf("%s\n", sub);
-	else
-		printf("Error");
-	return (0);
-}*/
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char *str = "Hello world";
+// 	char *sub = ft_substr(str, 2, 5);
+// 	if (sub)
+// 	{
+// 		printf("%s\n", sub);
+// 		free(sub);
+// 	}
+// 	else
+// 	{
+// 		printf("Error");
+// 	}
+// 	return (0);
+// }

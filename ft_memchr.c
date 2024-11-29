@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:17:32 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/13 11:36:43 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/26 12:59:55 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/*#include <stdio.h>
-#include <string.h>
+/*#include <string.h>
 
 int	main(void)
 {
@@ -47,5 +46,4 @@ int	main(void)
 	else
 		printf("Character not found\n");
 	return (0);
-}
-*/
+}*/

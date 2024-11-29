@@ -15,13 +15,13 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 		write(fd, s++, 1);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	ft_putstr_fd("Hello everyone\n", 1);
 	return (0);
-}
+}*/

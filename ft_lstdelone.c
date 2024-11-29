@@ -6,21 +6,21 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/25 15:42:26 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/25 15:59:06 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/26 16:26:09 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if (!lst || !del)
-        return;
-    del(lst->content);
-    free(lst);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
+	free(lst);
 }
 
-void    del(void *content)
+/*void    del(void *content)
 {
     free(content);
 }
@@ -51,4 +51,4 @@ int main(void)
     ft_lstdelone(node2, del);
 
     return (0);
-}
+}*/

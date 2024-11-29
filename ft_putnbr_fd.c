@@ -6,7 +6,7 @@
 /*   By: thdinh <thdinh@student.42berlin.de>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 17:35:46 by thdinh            #+#    #+#             */
-/*   Updated: 2024/11/14 17:43:20 by thdinh           ###   ########.fr       */
+/*   Updated: 2024/11/26 18:07:48 by thdinh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	char	c;
-		
+
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 1);
+		write(fd, "-2147483648", 11);
 	}
 	else if (n < 0)
 	{
@@ -34,11 +34,11 @@ void	ft_putnbr_fd(int n, int fd)
 	{
 		c = n + '0';
 		write(fd, &c, 1);
-	}	
+	}
 }
 
-int	main(void)
+/*int	main(void)
 {
 	ft_putnbr_fd(-42, 1);
 	return (0);
-}
+}*/
